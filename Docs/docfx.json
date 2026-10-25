@@ -1,0 +1,36 @@
+{
+  "$schema": "https://raw.githubusercontent.com/dotnet/docfx/main/schemas/docfx.schema.json",
+  "metadata": [
+    {
+      "src": [
+        {
+          "src": "api-project",
+          "files": [ "QuadBuffer.Docs.csproj" ]
+        }
+      ],
+      "dest": "api",
+      "namespaceLayout": "flattened"
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": [ "**/*.{md,yml}" ],
+        "exclude": [ "_*/**", "obj/**", "api-project/**", "doxygen/**", "native/**", "README.md", "adr/template.md" ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [ "native/**" ]
+      }
+    ],
+    "output": "_site",
+    "template": [ "default", "modern" ],
+    "globalMetadata": {
+      "_appName": "Quad Buffer Stereo",
+      "_appTitle": "Quad Buffer Stereo",
+      "_appFooter": "Quad Buffer Stereo documentation",
+      "_enableSearch": true
+    }
+  }
+}

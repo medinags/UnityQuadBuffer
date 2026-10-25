@@ -1,0 +1,23 @@
+{
+  "name": "com.xra.quadbuffer",
+  "version": "0.1.0",
+  "displayName": "Quad Buffer Stereo",
+  "description": "Quad-buffered (active stereo) output for Windows standalone players via a native D3D11 plugin.",
+  "unity": "6000.6",
+  "author": {
+    "name": "Camilo Medina"
+  },
+  "keywords": [
+    "stereo",
+    "quad buffer",
+    "3D",
+    "d3d11"
+  ],
+  "samples": [
+    {
+      "displayName": "Basic Stereo Scene",
+      "description": "A minimal scene with a QuadBufferCamera.",
+      "path": "Samples~/BasicStereo"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+- name: Manual
+  href: manual/
+- name: Architecture
+  href: architecture/
+- name: C# API
+  href: api/
+- name: Native API
+  href: native/index.html
+- name: Development
+  href: development/
+- name: Decisions
+  href: adr/

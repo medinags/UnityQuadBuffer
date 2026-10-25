@@ -1,0 +1,39 @@
+# Doxygen configuration for the native plugin API.
+# Only non-default settings are listed. Paths are relative to Docs/, where
+# build-docs.ps1 runs doxygen. QB_VERSION is set from package.json by the script.
+# The HTML goes to Docs/native (generated, not committed), which DocFX publishes at /native.
+
+PROJECT_NAME           = "QuadBufferPlugin"
+PROJECT_NUMBER         = $(QB_VERSION)
+PROJECT_BRIEF          = "Native D3D11 quad-buffer stereo plugin for Unity"
+
+INPUT                  = doxygen/mainpage.md \
+                         ../NativePlugin/include \
+                         ../NativePlugin/src
+FILE_PATTERNS          = *.h *.cpp
+RECURSIVE              = YES
+USE_MDFILE_AS_MAINPAGE = doxygen/mainpage.md
+
+OUTPUT_DIRECTORY       = .
+HTML_OUTPUT            = native
+GENERATE_HTML          = YES
+GENERATE_LATEX         = NO
+GENERATE_TREEVIEW      = YES
+HAVE_DOT               = NO
+
+EXTRACT_ALL            = NO
+EXTRACT_PRIVATE        = NO
+EXTRACT_STATIC         = NO
+SOURCE_BROWSER         = YES
+STRIP_FROM_PATH        = ../NativePlugin
+
+# Resolve UNITY_INTERFACE_* macros so exported functions are documented correctly.
+ENABLE_PREPROCESSING   = YES
+MACRO_EXPANSION        = YES
+EXPAND_ONLY_PREDEF     = YES
+PREDEFINED             = UNITY_INTERFACE_EXPORT= UNITY_INTERFACE_API=
+INCLUDE_PATH           = ../NativePlugin/external/UnityPluginAPI
+
+QUIET                  = YES
+WARN_IF_UNDOCUMENTED   = YES
+WARN_NO_PARAMDOC       = YES

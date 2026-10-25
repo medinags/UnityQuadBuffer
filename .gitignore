@@ -1,0 +1,31 @@
+# Native plugin build output
+NativePlugin/build/
+
+# Unity test project generated folders
+TestProject/[Ll]ibrary/
+TestProject/[Tt]emp/
+TestProject/[Oo]bj/
+TestProject/[Ll]ogs/
+TestProject/[Bb]uild/
+TestProject/[Bb]uilds/
+TestProject/[Uu]ser[Ss]ettings/
+TestProject/MemoryCaptures/
+TestProject/*.csproj
+TestProject/*.sln
+TestProject/*.slnx
+
+# IDE
+.vs/
+.vscode/
+.idea/
+
+# Documentation build output
+Docs/_site/
+Docs/obj/
+Docs/_unityrefs/
+Docs/native/
+Docs/manual/
+Docs/api-project/bin/
+Docs/api-project/obj/
+Docs/api/*.yml
+Docs/api/.manifest

@@ -1,0 +1,6 @@
+- name: Building and testing
+  href: building.md
+- name: Writing documentation
+  href: documentation.md
+- name: Releasing
+  href: releasing.md

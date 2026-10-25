@@ -1,0 +1,20 @@
+<!--
+  Compiles the package's C# code outside Unity so DocFX can generate the API reference.
+  Not used by Unity. build-docs.ps1 copies the Unity assemblies into Docs/_unityrefs first.
+-->
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <!-- Unity compiles against .NET Standard 2.1. -->
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <LangVersion>9.0</LangVersion>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>CS1591</NoWarn>
+    <UnityRefs Condition="'$(UnityRefs)' == ''">$(MSBuildThisFileDirectory)../_unityrefs</UnityRefs>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="../../Packages/com.xra.quadbuffer/Runtime/**/*.cs" />
+    <Compile Include="../../Packages/com.xra.quadbuffer/Editor/**/*.cs" />
+    <Reference Include="$(UnityRefs)/*.dll" Private="false" />
+  </ItemGroup>
+</Project>
