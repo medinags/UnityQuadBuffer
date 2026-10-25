@@ -1,0 +1,9 @@
+{
+  "name": "QuadBuffer.Runtime",
+  "rootNamespace": "QuadBuffer",
+  "references": [],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "autoReferenced": true
+}
